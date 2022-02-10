@@ -1,6 +1,6 @@
-function binarysearch(arr,value){
+function binarysearch(arr,value){               // sort the array to do binary search
 let high=arr.length-1;
-let low=0;
+let low=0;                                      // works both on numbers and strings .
 let mid=0;
 while(low<=high){
     mid=Math.floor((high+low)/2)
@@ -16,4 +16,5 @@ while(low<=high){
 return "not found";
 }
 let number=[2,3,4,5,6,7,8]
-console.log(binarysearch(number,5))
+let fruits=["apple","banana","carrot","flower"]
+console.log(binarysearch(fruits,"mango"))

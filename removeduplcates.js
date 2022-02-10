@@ -32,3 +32,18 @@ let uniqueChars = chars.filter((c, index) => {
 let fruits=["apple","apple","carrot","mango","mango"];
 let results3= [...new Set(fruits)];
 console.log(results3)
+
+// another one for objects
+
+let array5=["A","B","C","A","E","B"];
+
+let count={};
+array5.forEach((item)=>{
+    if(count[item]){
+      count[item]+=1;
+    }else{
+      count[item]=1
+    }
+})
+
+console.log(count)
