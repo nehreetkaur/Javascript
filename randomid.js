@@ -1,15 +1,5 @@
+// both approaches work to generate random string;
 
-// function checking(num){
-// let strings= "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-// //strings=strings.split("");
-// for(let i=0;i<num;i++)
-//    // console.log(num[i])
-
-// }
-
-
-//console.log(checking(5))
 
 function checking(num){
   let text=""
@@ -22,6 +12,7 @@ function checking(num){
     return text;
 
 }
+console.log(checking(5))
 
 // second approach
 
