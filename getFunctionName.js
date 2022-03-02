@@ -7,3 +7,9 @@ person()
 
 // with the constructor method;
 
+function Person(){
+    console.log(this.constructor.name);
+}
+
+let p= new person();
+console.log(p.constructor.name);
