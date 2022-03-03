@@ -11,3 +11,17 @@ function checking(str){
 }
 
 console.log(checking("I am enough"));
+
+// to check wheather a string is blank or not
+
+function checking2(str){
+    if(str===""){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+console.log(checking2(""));
+
