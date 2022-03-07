@@ -124,3 +124,15 @@ return q.join(" ").trim();
 
 console.log(camelCases("hello there"))
 
+
+// how we uncamelize the string
+
+function cases(str,sym){
+
+let resArr= str.toLowerCase().split(" ") ;
+return `${resArr[0]} ${sym} ${resArr[1]}`
+
+}
+
+console.log(cases("I Enough","-"))
+
