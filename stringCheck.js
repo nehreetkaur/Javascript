@@ -87,3 +87,23 @@ return `${result[0]}  ${final.pop()}`. toUpperCase();
 
 console.log(stringCheck("Robin Singh"));
 
+
+// converts uppercase to lowercase and lowercase to uppercase;
+
+function textTranformation(str){
+    let ss= str.split("")
+
+    for(let i=0;i<str.length;i++){
+        //console.log(str[i])
+        if(ss[i]===ss[i].toLowerCase()){
+            ss[i]=ss[i].toUpperCase();
+        }
+        else if(ss[i]===ss[i].toUpperCase()){
+            ss[i]=ss[i].toLowerCase();
+        }
+    }
+    return ss.join(' ')
+}
+
+console.log(textTranformation("heLLo beaUTIfUL"));
+
