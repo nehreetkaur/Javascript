@@ -107,3 +107,20 @@ function textTranformation(str){
 
 console.log(textTranformation("heLLo beaUTIfUL"));
 
+
+
+// function for camel case
+
+function camelCases(str){
+let result= str.split(" ");
+
+const q= result.map((s)=>{
+  return s.replace(s[0],s[0].toUpperCase())
+})
+
+return q.join(" ").trim();
+}
+
+
+console.log(camelCases("hello there"))
+
