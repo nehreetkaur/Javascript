@@ -40,9 +40,22 @@ function returnChunksArray(str, chunkSize) {
 //   console.log("hello".indexOf("e"))
 
 
+// &lt; with <
+// &gt; with >
+// &quot; with "
+// &#39; with '
+// &amp; with &
 
 
+function unEscape(htmlStr){
+  htmlStr = htmlStr.replace(/&lt;/g , "<");	 
+  htmlStr = htmlStr.replace(/&gt;/g , ">");     
+  htmlStr = htmlStr.replace(/&quot;/g , "\"");  
+  htmlStr = htmlStr.replace(/&#39;/g , "\'");   
+  htmlStr = htmlStr.replace(/&amp;/g , "&");
+  return htmlStr;
+}
 
-
-
+let unEscapedStr =unEscape(`&lt;script&gt;alert(&#39;hi&#39;)&lt;/script&gt;`);
+console.log(unEscapedStr);
 
