@@ -24,4 +24,4 @@ function checking(str,word){
     return `${word} is repeated ${count} many times.`
 }
 
-console.log(checking("The quick brown fox jumps over the lazy fox dog","the"));
+console.log(checking("The quick brown fox jumps over the thick log","the"));
