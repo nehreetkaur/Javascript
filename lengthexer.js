@@ -10,3 +10,10 @@ function checking(len){
 }
 
 console.log(checking(10)); 
+
+
+// let form=document.getElementById("form1");  // to get the form children and its values
+// console.log(form.children[2]);
+// for(let i=0;i<form.length;i++){
+//     console.log(`${form[0].value} ${form[1].value}`)
+// }
