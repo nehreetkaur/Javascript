@@ -9,3 +9,7 @@ function checking(str){
 }
 
 console.log(checking(' w3resource '));
+
+//exclude  start and end white-space  /(^\s*)(|\s*$)/g
+
+
