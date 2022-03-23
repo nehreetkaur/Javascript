@@ -12,4 +12,7 @@ console.log(checking(' w3resource '));
 
 //exclude  start and end white-space  /(^\s*)(|\s*$)/g
 
+// convert 2 or more spaces to 1  /str.replace(/[]{2,}/g," ")
+
+
 
