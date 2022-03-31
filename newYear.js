@@ -22,30 +22,57 @@
 
 
 
-function bribes(arr){
-    console.log(`Actual array : ${arr}`);
+// function bribes(arr){
+//     console.log(`Actual array : ${arr}`);
   
-let count=0;
-//console.log(`Actual array length is ${arr.length}`);
-//console.log(`Array -1 length is ${arr.length-1}`);
-for (let i=arr.length-1; i>0;i--){
-  //console.log(`Position of index ${i} @ ${arr[i]}`)
-  //console.log(` ${i}==i+1 is ==> ${i+1}`)
-  if(arr[i]-(i+1) > 2){
-      console.log('Too Chaotic');
-      return;
-  }
-  for(let j=Math.max(0,arr[i]-2);j<i;j++){
-      if(arr[j] > arr[i])
-      count++;
-  }
+// let count=0;
+// //console.log(`Actual array length is ${arr.length}`);
+// //console.log(`Array -1 length is ${arr.length-1}`);
+// for (let i=arr.length-1; i>0;i--){
+//   //console.log(`Position of index ${i} @ ${arr[i]}`)
+//   //console.log(` ${i}==i+1 is ==> ${i+1}`)
+//   if(arr[i]-(i+1) > 2){
+//       console.log('Too Chaotic');
+//       return;
+//   }
+//   for(let j=Math.max(0,arr[i]-2);j<i;j++){
+//       if(arr[j] > arr[i])
+//       count++;
+//   }
+// }
+//  console.log(count)
+// }
+
+function bribes(q){
+ let bribeCount=0;
+ let isFlag=false;
+ for(let i=q.length-1 ;i>=0 ;i--){
+     if(q[i]-i >2 ){
+         console.log('Too chaotic');
+         isFlag=true;
+         break;
+     }
+     
+     if((i-2 >=0) && q[i-2]==i+1){
+         q[i-2]=q[i-1];
+         q[i-1]=q[i]
+         q[i]=i+1
+         bribeCount+=2;
+     }
+
+     if((i-1 >=0) && q[i-1]==i+1){
+         q[i-1]=q[i]
+         q[i]=i+1
+         bribeCount++;
+     }
+ }
+ 
+ if(! isFlag){
+     console.log(bribeCount);
+ }
+
+
 }
- console.log(count)
-}
 
 
-bribes([1,2,3,4,6,5]);
-
-
-
-
+bribes([1,2,3,4,8,5,6,7])
