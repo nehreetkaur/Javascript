@@ -38,3 +38,5 @@ function countswaps1(arr){
 }
 let number=[4,3,1,2];
 console.log(countswaps1(numbers));
+
+// both are working but second one takes less time to execute .
