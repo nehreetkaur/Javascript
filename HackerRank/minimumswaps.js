@@ -17,7 +17,7 @@ function countswaps(arr){
  let numbers=[7,1,3,2,4,5,6]
 console.log(countswaps(numbers));
 
-// optimized solution
+// optimized solution and better solution
 function countswaps1(arr){
     let count=0;
 
