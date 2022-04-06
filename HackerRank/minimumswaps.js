@@ -20,7 +20,7 @@ console.log(countswaps(numbers));
 // optimized solution and better solution
 function countswaps1(arr){
     let count=0;
-
+     // iterate the array again and minus from the temp 
     for(let i=0;i<arr.length;i++){
          while(arr[i]!==i+1){
              let temp= arr[i];
