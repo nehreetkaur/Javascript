@@ -21,3 +21,22 @@ function manipulation(n, queries) {
 }
 
 console.log(manipulation(12,[[2,7,4],[5,9,2],[6,12,8]]))
+
+
+/// brute force method
+
+
+function manipulation2(n,queries){
+    let arr= new Array(n+1).fill(0);
+let max=0;
+    queries.forEach(([a,b,k])=>{
+        for(let i=a;i<=b;i++)
+        arr[i]+=k;
+        if(arr[i]> max){
+            max=arr[i]
+        }
+
+    })
+
+return max;
+}
