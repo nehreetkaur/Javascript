@@ -58,26 +58,52 @@ console.log(count-(pairs*2))
 // }
 
 
-function makeAnagram(a, b) {
-    const aAr = a.split('');
-    const bAr = b.split('');
+// function makeAnagram(a, b) {
+//     const aAr = a.split('');
+//     const bAr = b.split('');
     
-    let removed = 0;
+//     let removed = 0;
     
-    for(let i = 0; i < aAr.length ; i++){
-        if(bAr.includes(aAr[i])){
-            bAr.splice(bAr.indexOf(aAr[i]), 1)
-            console.log(bAr);
-        }else{
-            removed++;
-            //console.log(removed);
+//     for(let i = 0; i < aAr.length ; i++){
+//         if(bAr.includes(aAr[i])){
+//             bAr.splice(bAr.indexOf(aAr[i]), 1)
+//             console.log(bAr);
+//         }else{
+//             removed++;
+//             //console.log(removed);
             
-        }
-    }
+//         }
+//     }
     
    
-    return (removed + bAr.length)
+//     return (removed + bAr.length)
 
+// }
+
+// console.log(makeAnagram("helloq","ehlolwtt"));
+
+
+
+// working code;
+function anagram(a,b){
+
+    let A=a.split('');
+    let B=b.split('');
+
+    let count=0;
+    let total=A.length + B.length;
+
+    for(let i=0 ; i< A.length; i++){
+        for (let j=0 ;j< B.length;j++){
+            if(A[i]==B[j]){
+                B.splice(j,1)
+                count++;
+                break;
+            }
+        }
+    }
+
+    console.log(total - (count*2));
 }
 
-console.log(makeAnagram("helloq","ehlolwtt"));
+anagram("hellott","oehll");
