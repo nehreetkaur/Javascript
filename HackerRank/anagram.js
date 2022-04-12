@@ -1,31 +1,40 @@
 // anagram hackerrank solution
 
+function checking (a,b){
 
-function checking(str1 , str2){
-console.log(`${str1} &&&  ${str2}`);
-str1=str1.split('');
+    var a = a.split("");
+    var b = b.split("");
+var countA = a.length;
+var countB = b.length;
+var count = countA + countB;
+console.log(count)
+    var pair = 0;
+    for(var i = 0; i < countA;i++){
+        
+        for(var j = 0; j < countB; j++){
+       
+            if(a[i] == b[j]){
+            
+               //console.log(`value of a[i] is ${a[i]}`)
+               pair++;
+               console.log(`b.replace(${j},'')`)
 
-console.log(str1)
-
-str2=str2.split('')
-let count={};
-
-
-for(let i=0;i<str1.length;i++){
-   
-
-
+               
+              
+               
+                break;
+            }
+        }
+    }
+    console.log(count - (pair*2));
 }
+    
+
+checking("hellott","ehlol");
 
 
 
 
-
-
-}
-
-
-console.log(checking("hello","elolh"));
 
 // to check the function one string characters present in another string;
 // let string1="helllo";
