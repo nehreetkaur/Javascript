@@ -7,13 +7,13 @@
 
 function manipulation(n, queries) {
     let arr = new Array(n + 1).fill(0);
-    queries.forEach(([a, b, k]) => {
+    queries.map(([a, b, k]) => {
         arr[a - 1] += k;
         arr[b] -= k;
     })
     let sum = 0;
     let max = 0;
-    arr.forEach(val => {
+    arr.map(val => {
         sum += val;
         max = Math.max(sum, max)
     })
