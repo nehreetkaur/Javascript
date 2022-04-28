@@ -31,4 +31,29 @@ function checking(obj1,obj2){
     return true
 }
 
-console.log(checking(obj1,obj2));
+//console.log(checking(obj1,obj2));
+
+
+// split in two demionsional array
+
+let data='id, name, email\n0, Todd, todd@gmail.com\n1, Petra, petra@gmail.com';
+
+function check(str,delimiter=','){
+    let titles=str.slice(0,str.indexOf("\n")).split(delimiter);
+    
+    let rows=str.slice(str.indexOf('\n')+1).split('\n')
+    return rows.map((row)=>{
+        let values= row.split(delimiter)
+
+        return titles.reduce((obj,acc,i)=>{
+            obj[acc]=values[i]
+            return obj;
+
+        },{})
+    })
+
+}
+
+
+
+console.log(check(data,','));
