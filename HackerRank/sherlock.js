@@ -56,3 +56,6 @@ else{
 
 
 console.log(checking("aabbccd"));
+
+
+// Learned technical fundamentals in HTML,CSS ,JAVASCRIPT, GIT, SQL,REACT-JS,NODE and development best practices. Collaborated with many team-members to deliver projects on deadline. Actively, helped team-mates to troubleshoot errors in multiple projects. Deployed finalized projects using git workflows to  production environments.
