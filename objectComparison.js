@@ -16,6 +16,9 @@ let obj2={
 
 // we will write a function 
 
+// it is to check the logic if key[value] in first object are same as key and value in obj2.
+//if ob2 has same everything but has extra key value in it, will return false in that case
+
 function checking(obj1,obj2){
     // will iterate the second one
 
